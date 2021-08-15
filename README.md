@@ -37,6 +37,8 @@ sudo make install
 
 Note here that the `-j<n>` is used for accelerating the compiling process. The number n is select according to the number of threads that your CPU have. If your CPU has hyperthreading technology (HT), the number should be 2 times your CPU cores (e.g. most Intel Core i7/i9 CPUs, Intel Xeon CPUs and AMD Ryzen/ThreadRipper CPUs). For CPUs not supporting such technology, which normally depends on the settings of chip manufacturer (e.g. i7-9700K does not support HT but i7-8700K does), just put in the number of your CPU cores (e.g. the CPUs used for my testing, which are Intel Core i5-4590T and Intel Core i5-9600K).
 
+Finally, reboot the system to make it work.
+
 ## Notice for building
 
 Do NOT put the folder under some folder with space in its name like Untitled folder, it will result in a make error during the `sudo make modules_install`.
