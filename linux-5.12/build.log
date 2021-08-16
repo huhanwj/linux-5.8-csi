@@ -1,0 +1,40 @@
+Makefile:644: include/config/auto.conf: No such file or directory
+Makefile:689: include/config/auto.conf.cmd: No such file or directory
+arch/x86/hyperv/hv_apic.c: In function ‘hv_send_ipi_mask_allbutself’:
+arch/x86/hyperv/hv_apic.c:236:1: warning: the frame size of 1032 bytes is larger than 1024 bytes [-Wframe-larger-than=]
+ }
+ ^
+fs/jffs2/xattr.c: In function ‘jffs2_build_xattr_subsystem’:
+fs/jffs2/xattr.c:887:1: warning: the frame size of 1120 bytes is larger than 1024 bytes [-Wframe-larger-than=]
+ }
+ ^
+drivers/net/wireless/ath/ath9k/ar9003_csi.c: In function ‘csi_read’:
+drivers/net/wireless/ath/ath9k/ar9003_csi.c:201:9: warning: ignoring return value of ‘copy_to_user’, declared with attribute warn_unused_result [-Wunused-result]
+         copy_to_user(user_buf,tx_buf,len);                  // COPY
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/ath/ath9k/ar9003_mac.c: In function ‘ar9003_set_txdesc’:
+drivers/net/wireless/ath/ath9k/ar9003_mac.c:166:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   u32 ctl13 = (ads->ctl13) & ~(AR_xmit_data_tries1 | AR_xmit_data_tries2 | AR_xmit_data_tries3);
+   ^~~
+drivers/net/wireless/ath/ath9k/ar9003_mac.c:168:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   u32 ctl20 = (ads->ctl20) & 0x3f000000;
+   ^~~
+drivers/net/wireless/ath/ath9k/ar9003_mac.c: In function ‘ath9k_hw_process_rxdesc_edma’:
+drivers/net/wireless/ath/ath9k/ar9003_mac.c:609:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (rxsp->status11 & AR_KeyMiss)
+  ^~
+drivers/net/wireless/ath/ath9k/ar9003_mac.c:613:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   data_len = rxs->rs_datalen;
+   ^~~~~~~~
+drivers/cpufreq/cpufreq_ondemand.c: In function ‘od_set_powersave_bias’:
+drivers/cpufreq/cpufreq_ondemand.c:446:1: warning: the frame size of 1032 bytes is larger than 1024 bytes [-Wframe-larger-than=]
+ }
+ ^
+drivers/net/ethernet/mellanox/mlx5/core/en_tc.c: In function ‘mlx5e_hairpin_fill_rqt_rqns’:
+drivers/net/ethernet/mellanox/mlx5/core/en_tc.c:465:1: warning: the frame size of 1032 bytes is larger than 1024 bytes [-Wframe-larger-than=]
+ }
+ ^
+drivers/vhost/scsi.c: In function ‘vhost_scsi_flush’:
+drivers/vhost/scsi.c:1479:1: warning: the frame size of 1032 bytes is larger than 1024 bytes [-Wframe-larger-than=]
+ }
+ ^
