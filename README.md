@@ -44,3 +44,18 @@ Finally, reboot the system to make it work.
 Do NOT put the folder under some folder with space in its name like Untitled folder, it will result in a make error during the `sudo make modules_install`.
 
 If you find that uname -r does not give 5.12.0-CSI, then you can modify `/etc/default/grub` and deactivate `GRUB_HIDDEN_TIMEOUT=0` by commenting it. Then run `sudo update-grub` to update the grub and reboot the system. You can see the grub menu and select advanced options for ubuntu and select our customized kernel.
+
+If you encounter the error stating
+
+`make[1]: *** No rule to make target 'debian/canonical-certs.pem', needed by 'certs/x509_certificate_list'.  Stop.`,
+
+you need to modify `.config` file.
+
+In your kernel configuration file you will find this line:
+
+`CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"`
+
+Change it to this:
+
+`CONFIG_SYSTEM_TRUSTED_KEYS=""`
+
