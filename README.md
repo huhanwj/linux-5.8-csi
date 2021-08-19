@@ -59,6 +59,9 @@ Change it to this:
 
 `CONFIG_SYSTEM_TRUSTED_KEYS=""`
 
+**IMPORTANT**: Disable Secure Boot before installing the kernel.
+
+**Know Issues**: An unknown issue will cause boot failure in Lenovo ThinkCentre M920q (i5-9500T) (Possibly due to Lenovo BIOS or Intel microcode issue, both tested under the newest version).
 ## Source
 
 *Source code of Atheros CSI Tool*: https://github.com/xieyaxiongfly/Atheros-CSI-Tool
