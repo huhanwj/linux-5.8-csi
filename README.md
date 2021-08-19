@@ -59,3 +59,8 @@ Change it to this:
 
 `CONFIG_SYSTEM_TRUSTED_KEYS=""`
 
+## Source
+
+*Source code of Atheros CSI Tool*: https://github.com/xieyaxiongfly/Atheros-CSI-Tool
+
+*Manual for Atheros CSI Tool*: https://wands.sg/research/wifi/AtherosCSI/document/Atheros-CSI-Tool-User-Guide.pdf
