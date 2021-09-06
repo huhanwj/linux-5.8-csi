@@ -13,7 +13,7 @@ Also Github currently does not accept account passwords to authenticate Git oper
 **First, remember to download or clone the whole repository.**
 
 ### System Requirements
-Any Ubuntu system (we only test on Ubuntu machines)
+Any Ubuntu system with kernel version smaller or equal to 5.8(we only test on Ubuntu machines)
 
 ### Install required packages
 Some packages are needed (may still have missing packages when compiling, add the missing packages yourself depending on what error you encounter)
