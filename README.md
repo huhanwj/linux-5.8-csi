@@ -1,5 +1,5 @@
-# linux-5.12-csi
-This project aims to make the Atheros CSI Tool developed by Wirless And Networked Distributed Sensing (WANDS) system group @ NTU, Singapore work on newer linux kernel (i.e. 5.12 in our project).
+# linux-5.8-csi
+This project aims to make the Atheros CSI Tool developed by Wirless And Networked Distributed Sensing (WANDS) system group @ NTU, Singapore work on newer linux kernel (i.e. 5.8 backport in our project).
 
 ## Notice for downloading this repository
 
@@ -22,16 +22,13 @@ Some packages are needed (may still have missing packages when compiling, add th
 
 Then, run the following command in this folder
 
-`make menuconfig`
+`make defconfig-ath9k`
 
-Make sure that the items under *Atheros 802.11n wireless cards support* in `Device Drivers > Network device support > Wireless LAN` is enabled (enabling by space key). Save first and then exit.
 
 Next compile the kernel modules
 
 ```bash
 make -j<n>
-make modules
-sudo make modules_install
 sudo make install
 ```
 
@@ -41,23 +38,6 @@ Finally, reboot the system to make it work.
 
 ## Notice for building
 
-Do NOT put the folder under some folder with space in its name like Untitled folder, it will result in a make error during the `sudo make modules_install`.
-
-If you find that uname -r does not give 5.12.0-CSI, then you can modify `/etc/default/grub` and deactivate `GRUB_HIDDEN_TIMEOUT=0` by commenting it. Then run `sudo update-grub` to update the grub and reboot the system. You can see the grub menu and select advanced options for ubuntu and select our customized kernel.
-
-If you encounter the error stating
-
-`make[1]: *** No rule to make target 'debian/canonical-certs.pem', needed by 'certs/x509_certificate_list'.  Stop.`,
-
-you need to modify `.config` file.
-
-In your kernel configuration file you will find this line:
-
-`CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"`
-
-Change it to this:
-
-`CONFIG_SYSTEM_TRUSTED_KEYS=""`
 
 **IMPORTANT**: Disable Secure Boot before installing the kernel.
 
