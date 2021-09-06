@@ -1,4 +1,0 @@
-drivers/vhost/scsi.c: In function ‘vhost_scsi_flush’:
-drivers/vhost/scsi.c:1479:1: warning: the frame size of 1032 bytes is larger than 1024 bytes [-Wframe-larger-than=]
- }
- ^
