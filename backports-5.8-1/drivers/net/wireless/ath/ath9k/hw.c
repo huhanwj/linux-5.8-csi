@@ -1876,6 +1876,7 @@ int ath9k_hw_reset(struct ath_hw *ah, struct ath9k_channel *chan,
 	struct timespec64 tsf_ts;
 	u32 tsf_offset;
 	u64 tsf = 0;
+	u32 tmp;
 	int r;
 	bool start_mci_reset = false;
 	bool save_fullsleep = ah->chip_fullsleep;
@@ -2083,6 +2084,10 @@ int ath9k_hw_reset(struct ath_hw *ah, struct ath9k_channel *chan,
 		ah->radar_conf.ext_channel = IS_CHAN_HT40(chan);
 		ath9k_hw_set_radar_params(ah);
 	}
+	//csi_debug 
+    	tmp = REG_READ(ah,0x8344);
+    	tmp |= (1 << 28);
+    	REG_WRITE(ah, 0x8344,tmp);
 
 	return 0;
 }
