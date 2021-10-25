@@ -41,6 +41,8 @@ Note here that the `-j<n>` is used for accelerating the compiling process. The n
 
 Finally, reboot the system to make it work.
 
+## Conf
+For Conf, please see the [wiki](https://github.com/huhanwj/linux-5.8-csi/wiki) page
 ## Source
 
 *Source code of Atheros CSI Tool*: https://github.com/xieyaxiongfly/Atheros-CSI-Tool
