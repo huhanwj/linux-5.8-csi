@@ -43,6 +43,12 @@ Finally, reboot the system to make it work.
 
 ## Conf
 For Conf, please see the [wiki](https://github.com/huhanwj/linux-5.8-csi/wiki) page
+
+## UserSpace tool
+For hostapd conf, please also refer to the [wiki](https://github.com/huhanwj/linux-5.8-csi/wiki) page.
+
+For other tools, we use the same one as provided in original CSI tool.
+
 ## Source
 
 *Source code of Atheros CSI Tool*: https://github.com/xieyaxiongfly/Atheros-CSI-Tool
