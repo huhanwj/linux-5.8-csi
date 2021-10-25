@@ -15,15 +15,20 @@ Also Github currently does not accept account passwords to authenticate Git oper
 ### System Requirements
 Any Ubuntu system with kernel version smaller or equal to 5.8(we only test on Ubuntu machines)
 
+For Ubuntu 18.04, please use 5.8 backport
+
+For Ubuntu 16.04, please use 4.19 backport
+
 ### Install required packages
 Some packages are needed (may still have missing packages when compiling, add the missing packages yourself depending on what error you encounter)
 
 `sudo apt-get install build-essential bison bc flex libncurses5-dev libncursesw5-dev libssl-dev libelf-dev`
 
+First, you should go into the backport version that you'd like to install, i.e. `cd backport-5.8-1`
+
 Then, run the following command in this folder
 
 `make defconfig-ath9k`
-
 
 Next compile the kernel modules
 
@@ -36,12 +41,6 @@ Note here that the `-j<n>` is used for accelerating the compiling process. The n
 
 Finally, reboot the system to make it work.
 
-## Notice for building
-
-
-**IMPORTANT**: Disable Secure Boot before installing the kernel.
-
-**Know Issues**: An unknown issue will cause boot failure in Lenovo ThinkCentre M920q (i5-9500T) (Possibly due to Lenovo BIOS or Intel microcode issue, both tested under the newest version).
 ## Source
 
 *Source code of Atheros CSI Tool*: https://github.com/xieyaxiongfly/Atheros-CSI-Tool
