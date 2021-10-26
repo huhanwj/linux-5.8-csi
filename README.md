@@ -13,11 +13,7 @@ Also Github currently does not accept account passwords to authenticate Git oper
 **First, remember to download or clone the whole repository.**
 
 ### System Requirements
-Any Ubuntu system with kernel version smaller or equal to 5.8(we only test on Ubuntu machines)
-
-For Ubuntu 18.04, please use 5.8 backport
-
-For Ubuntu 16.04, please use 4.19 backport
+Any Ubuntu system with kernel version smaller or equal to 5.8 should be fine. (we only test on Ubuntu 18.04 machines)
 
 ### Install required packages
 Some packages are needed (may still have missing packages when compiling, add the missing packages yourself depending on what error you encounter)
